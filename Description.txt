@@ -1,15 +1,15 @@
 Object of testing http://194.6.232.158:81
 Programm-tool for testing : Silenium IDE
 
-Test Suite ¹1:  Login
-test case ¹1
-test case ¹2
-test case ¹3
-test case ¹4
-test case ¹5
+Test Suite #1:  Login
+test case #1
+test case #2
+test case #3
+test case #4
+test case #5
 
-Test Suite ¹2:  Create new player
-test case ¹1
+Test Suite #2:  Create new player
+test case #1
 
-Test Suite ¹3:  Credit Real Money balance
-test case ¹1
+Test Suite #3:  Credit Real Money balance
+test case #1
