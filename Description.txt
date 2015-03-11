@@ -1,12 +1,12 @@
 Object of testing http://194.6.232.158:81
 Programm-tool for testing : Silenium IDE
 
-Test Suite #1:  Login
-test case #1
-test case #2
-test case #3
-test case #4
-test case #5
+Test Suite #1: Login
+test case #1: Login при незаполненных полях Username и Password
+test case #2: Login при незапоненном поле Password
+test case #3: Login при незапоненном поле Username
+test case #4: Login при вводе неверных данных в поля Username и Password
+test case #5: Login при вводе верных данных в поля Username и Password <!--Valid data for credentials: Username: admin; Password: 123 -->
 
 Test Suite #2:  Create new player
 test case #1
