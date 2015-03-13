@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://194.6.232.158:81/" />
+<title>начало</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">начало</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/auth/login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#password</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#logIn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#datagrid_actionpanel__723a925886&gt;a&gt;img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players - Insert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>player</td>
+	<td>player</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${player}&quot;.split(&quot;_&quot;)[0]</td>
+	<td>first</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${first}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${player}&quot;.split(&quot;_&quot;)[1]</td>
+	<td>last</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${last}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['last']=${last}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${first}${last}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#ff14642ac1c__us_login</td>
+	<td>${first}${last}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>@gmail.com</td>
+	<td>mail</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#ff14642ac1c__us_email</td>
+	<td>${first}${last}${mail}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>123456</td>
+	<td>pass</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#ff14642ac1c__us_password</td>
+	<td>${pass}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#ff14642ac1c__confirm_password</td>
+	<td>${pass}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.form_actions_container&gt;input[value=&quot;Save&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'ID')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=3]</td>
+	<td>${first}${last}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=7]</td>
+	<td>1,000.00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players - Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#ff14642ac1c__us_login</td>
+	<td>${first}${last}</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#ff14642ac1c__us_email</td>
+	<td>${first}${last}${mail}</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(2)&gt;td:contains(&quot;0.00&quot;)</td>
+	<td>0.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(3)&gt;td:contains(&quot;1,000.00&quot;)</td>
+	<td>1,000.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(4)&gt;td:contains(&quot;0.00&quot;)</td>
+	<td>0.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(5)&gt;td:contains(&quot;0.00&quot;)</td>
+	<td>0.00</td>
+</tr>
+</tbody></table>
+</body>
+</html>
