@@ -38,6 +38,16 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
+	<td>link=ID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=3]</td>
+	<td>player</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
 	<td>css=#datagrid_actionpanel__723a925886&gt;a&gt;img</td>
 	<td></td>
 </tr>
@@ -45,11 +55,6 @@
 	<td>verifyTitle</td>
 	<td>Players - Insert</td>
 	<td></td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>player</td>
-	<td>player</td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -74,17 +79,22 @@
 <tr>
 	<td>storeEval</td>
 	<td>storedVars['last']=${last}+1</td>
+	<td>new</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${new}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${first}${last}</td>
+	<td>${first}_${last}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>css=#ff14642ac1c__us_login</td>
-	<td>${first}${last}</td>
+	<td>${first}_${last}</td>
 </tr>
 <tr>
 	<td>store</td>
@@ -94,7 +104,7 @@
 <tr>
 	<td>type</td>
 	<td>css=#ff14642ac1c__us_email</td>
-	<td>${first}${last}${mail}</td>
+	<td>${first}_${last}${mail}</td>
 </tr>
 <tr>
 	<td>store</td>
@@ -122,14 +132,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>css=#723a925886__email</td>
+	<td>${first}_${last}${mail}</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>//a[contains(text(),'ID')]</td>
+	<td>name=search</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=3]</td>
-	<td>${first}${last}</td>
+	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=6]</td>
+	<td>0.00</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -148,18 +168,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=#ff14642ac1c__us_login</td>
-	<td>${first}${last}</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=#ff14642ac1c__us_email</td>
-	<td>${first}${last}${mail}</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(2)&gt;td:contains(&quot;0.00&quot;)</td>
-	<td>0.00</td>
+	<td>//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]</td>
+	<td>$0.00</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -169,12 +179,12 @@
 <tr>
 	<td>assertText</td>
 	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(4)&gt;td:contains(&quot;0.00&quot;)</td>
-	<td>0.00</td>
+	<td>$0.00</td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(5)&gt;td:contains(&quot;0.00&quot;)</td>
-	<td>0.00</td>
+	<td>0.00 LP</td>
 </tr>
 </tbody></table>
 </body>
