@@ -42,7 +42,87 @@
 	<td></td>
 </tr>
 <tr>
+	<td>store</td>
+	<td>testname</td>
+	<td>univar</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_login']</td>
+	<td>${univar}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_email']</td>
+	<td>${univar}@mail.ru</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>012345</td>
+	<td>pasvar</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__confirm_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>XPath=//select[@id='ff14642ac1c__us_owner_id']</td>
+	<td>admin (myself)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_fname']</td>
+	<td>${univar}1st</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_lname']</td>
+	<td>${univar}last</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_city']</td>
+	<td>${univar}city</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>XPath=//select[@id='ff14642ac1c__us_country']</td>
+	<td>Please choose</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//textarea[@id='ff14642ac1c__us_address']</td>
+	<td>${univar}adress</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_phone']</td>
+	<td>000-00-00</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>XPath=//select[@id='ff14642ac1c__us_gender']</td>
+	<td>Male</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_birthday']</td>
+	<td>03-13-1997</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@type='button'][@value='Save']</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
 	<td></td>
 	<td></td>
 </tr>
