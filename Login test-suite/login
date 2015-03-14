@@ -12,7 +12,7 @@
 <tr><td><a href="pass_null.html">pass_null</a></td></tr>
 <tr><td><a href="username_null.html">username_null</a></td></tr>
 <tr><td><a href="username&pass_invalid.html">username&pass_invalid</a></td></tr>
-<tr><td><a href="login">username&pass_valid</a></td></tr>
+<tr><td><a href="username&pass_valid.html">username&pass_valid</a></td></tr>
 </tbody></table>
 </body>
 </html>
