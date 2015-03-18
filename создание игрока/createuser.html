@@ -1,14 +1,23 @@
+<<<<<<< HEAD
+=======
+<!--Окончательная версия теста для создания игрока-->
+>>>>>>> si_7
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://194.6.232.158:81/" />
+<<<<<<< HEAD
 <title>начало</title>
+=======
+<title>New Test</title>
+>>>>>>> si_7
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
+<<<<<<< HEAD
 <tr><td rowspan="1" colspan="3">начало</td></tr>
 </thead><tbody>
 <tr>
@@ -19,26 +28,49 @@
 <tr>
 	<td>type</td>
 	<td>css=#username</td>
+=======
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='username']</td>
+>>>>>>> si_7
 	<td>admin</td>
 </tr>
 <tr>
 	<td>type</td>
+<<<<<<< HEAD
 	<td>css=#password</td>
+=======
+	<td>XPath=//input[@id='password']</td>
+>>>>>>> si_7
 	<td>123</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
+<<<<<<< HEAD
 	<td>css=#logIn</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTitle</td>
+=======
+	<td>css=input[id='logIn'][type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+>>>>>>> si_7
 	<td>Players</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
+<<<<<<< HEAD
 	<td>link=ID</td>
+=======
+	<td>XPath=//a[contains(text(),'ID')]</td>
+>>>>>>> si_7
 	<td></td>
 </tr>
 <tr>
@@ -47,8 +79,18 @@
 	<td>player</td>
 </tr>
 <tr>
+<<<<<<< HEAD
 	<td>clickAndWait</td>
 	<td>css=#datagrid_actionpanel__723a925886&gt;a&gt;img</td>
+=======
+	<td>echo</td>
+	<td>${player}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//a[text()='Insert']</td>
+>>>>>>> si_7
 	<td></td>
 </tr>
 <tr>
@@ -88,6 +130,7 @@
 </tr>
 <tr>
 	<td>echo</td>
+<<<<<<< HEAD
 	<td>${first}_${last}</td>
 	<td></td>
 </tr>
@@ -124,6 +167,54 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>css=.form_actions_container&gt;input[value=&quot;Save&quot;]</td>
+=======
+	<td>${first}_${new}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>@test.com</td>
+	<td>mail</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mail}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_login']</td>
+	<td>${first}_${new}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_email']</td>
+	<td>${first}_${new}${mail}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>012345</td>
+	<td>pasvar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${passvar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__confirm_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//input[@type='button'][@value='Save']</td>
+>>>>>>> si_7
 	<td></td>
 </tr>
 <tr>
@@ -133,6 +224,7 @@
 </tr>
 <tr>
 	<td>type</td>
+<<<<<<< HEAD
 	<td>css=#723a925886__email</td>
 	<td>${first}_${last}${mail}</td>
 </tr>
@@ -144,16 +236,32 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>name=search</td>
+=======
+	<td>XPath=//input[@id='723a925886__email']</td>
+	<td>${first}_${new}${mail}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>XPath=//input[@type='button'][@value='Search']</td>
+>>>>>>> si_7
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
+<<<<<<< HEAD
 	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=6]</td>
+=======
+	<td>XPath=//parent::tbody/child::tr[position()=2]/child::td[position()=6]</td>
+>>>>>>> si_7
 	<td>0.00</td>
 </tr>
 <tr>
 	<td>verifyText</td>
+<<<<<<< HEAD
 	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=7]</td>
+=======
+	<td>XPath=//parent::tbody/child::tr[position()=2]/child::td[position()=7]</td>
+>>>>>>> si_7
 	<td>1,000.00</td>
 </tr>
 <tr>
@@ -168,24 +276,47 @@
 </tr>
 <tr>
 	<td>assertText</td>
+<<<<<<< HEAD
 	<td>//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]</td>
+=======
+	<td>XPath=//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]</td>
+>>>>>>> si_7
 	<td>$0.00</td>
 </tr>
 <tr>
 	<td>assertText</td>
+<<<<<<< HEAD
 	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(3)&gt;td:contains(&quot;1,000.00&quot;)</td>
+=======
+	<td>XPath=//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]</td>
+>>>>>>> si_7
 	<td>1,000.00</td>
 </tr>
 <tr>
 	<td>assertText</td>
+<<<<<<< HEAD
 	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(4)&gt;td:contains(&quot;0.00&quot;)</td>
+=======
+	<td>XPath=//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[4]/td[2]</td>
+>>>>>>> si_7
 	<td>$0.00</td>
 </tr>
 <tr>
 	<td>assertText</td>
+<<<<<<< HEAD
 	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(5)&gt;td:contains(&quot;0.00&quot;)</td>
 	<td>0.00 LP</td>
 </tr>
+=======
+	<td>XPath=//td[@id='c5618e27f0ab6d90d503b6ef5faca34c']/table/tbody/tr[2]/td/table/tbody/tr[5]/td[2]</td>
+	<td>0.00 LP</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//a[img [@alt='logout']][span[@class='logout']]</td>
+	<td></td>
+</tr>
+>>>>>>> si_7
 </tbody></table>
 </body>
 </html>
