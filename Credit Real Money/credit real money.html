@@ -37,11 +37,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>open</td>
-	<td>/players</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>css=#723a925886__email</td>
 	<td>user@mail.ru</td>
@@ -62,29 +57,29 @@
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>Players - Edit</td>
-	<td></td>
-</tr>
-<tr>
 	<td>verifyTitle</td>
 	<td>Players - Edit</td>
 	<td></td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>XPath=//td[contains(text(),'Real Money')]/parent::tr/child::td[contains(text(),'$')]</td>
+	<td>real1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${real1}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(3) img</td>
+	<td>XPath=//td[contains(text(),'Real Money')]/parent::tr/child::td[4]/a</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForPopUp</td>
 	<td></td>
-	<td>30000</td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>title=Transactions - Insert</td>
-	<td></td>
+	<td>50000</td>
 </tr>
 <tr>
 	<td>verifyTitle</td>
@@ -94,7 +89,7 @@
 <tr>
 	<td>select</td>
 	<td>css=#f6ffb4a0fec__account</td>
-	<td>Fun Money</td>
+	<td>Real Money</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -109,7 +104,7 @@
 <tr>
 	<td>type</td>
 	<td>css=#f6ffb4a0fec__notes</td>
-	<td>пополнение Fun Money</td>
+	<td>пополнение Real Money</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -119,62 +114,37 @@
 <tr>
 	<td>verifyTitle</td>
 	<td>Players - Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${real1}&quot;.split(&quot;$&quot;)[0]</td>
+	<td>first</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${real1}&quot;.split(&quot;$&quot;)[1]</td>
+	<td>last</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${last}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['last']=${last}+0000</td>
+	<td>real2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${real2}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//td[text()='Fun Money']/parent::tr/child::td[position()=2]</td>
-	<td>2,000.00</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=#c5618e27f0ab6d90d503b6ef5faca34c tr:nth-child(3) img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForPopUp</td>
-	<td></td>
-	<td>5000</td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>title=Transactions - Insert</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTitle</td>
-	<td>Transactions - Insert</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=f6ffb4a0fec__account</td>
-	<td>Fun Money</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=f6ffb4a0fec__direction</td>
-	<td>Debit</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=#f6ffb4a0fec__amount</td>
-	<td>1000</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=#f6ffb4a0fec__notes</td>
-	<td>уменьшение Fun Money для возможности повторного проведения теста</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=.form_actions_container&gt;input[value=&quot;Save&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyTitle</td>
-	<td>Players - Edit</td>
-	<td></td>
+	<td>XPath=//td[contains(text(),'Real Money')]/parent::tr/child::td[contains(text(),'$')]</td>
+	<td>$${real2}.00</td>
 </tr>
 <tr>
 	<td>click</td>
