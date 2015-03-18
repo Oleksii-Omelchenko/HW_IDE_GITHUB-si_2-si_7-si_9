@@ -47,9 +47,34 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=7]</td>
-	<td>1,000.00</td>
+	<td>storeText</td>
+	<td>XPath=//parent::tbody/child::tr[position()=2]/child::td[position()=6]</td>
+	<td>balance1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${balance1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${balance1}'.split('.')[0]</td>
+	<td>var1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${balance1}'.split('.')[1]</td>
+	<td>var2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${var1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${var2}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -82,6 +107,11 @@
 	<td>50000</td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>title=Transactions - Insert</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyTitle</td>
 	<td>Transactions - Insert</td>
 	<td></td>
@@ -99,7 +129,7 @@
 <tr>
 	<td>type</td>
 	<td>css=#f6ffb4a0fec__amount</td>
-	<td>1000</td>
+	<td>100</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -133,7 +163,7 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>storedVars['last']=${last}+0000</td>
+	<td>storedVars['last']=${last}+100.00</td>
 	<td>real2</td>
 </tr>
 <tr>
@@ -142,9 +172,49 @@
 	<td></td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>$${real2}.00</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyText</td>
 	<td>XPath=//td[contains(text(),'Real Money')]/parent::tr/child::td[contains(text(),'$')]</td>
 	<td>$${real2}.00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//input[@name='button_save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['var1']=${var1}+100</td>
+	<td>balance2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${balance2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${balance2}.${var2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>XPath=//parent::tbody/child::tr[position()=2]/child::td[position()=6]</td>
+	<td>${balance2}.${var2}</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>'${real2}'=='${balance2}'</td>
+	<td>true</td>
 </tr>
 <tr>
 	<td>click</td>

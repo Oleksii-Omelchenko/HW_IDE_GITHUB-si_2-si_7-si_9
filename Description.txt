@@ -1,0 +1,16 @@
+Object of testing http://194.6.232.158:81
+Programm-tool for testing : SileniumIDE
+
+Directory: Login
+Test Suite: login_test_suite
+test case: invalid password <!--Login при неверном значении Password. Проверка вывода сообщения-->
+test case: invalid username <!--Login при неверном значении Username. Проверка вывода сообщения-->
+test case: null password <!--Login при незапоненном поле Password. Проверка вывода сообщения-->
+test case: null username <!--Login при незапоненном поле Username. Проверка вывода сообщения-->
+test case: login         <!--Login при вводе верных данных в поля Username и Password(Username: admin; Password: 123)-->
+
+Directory: Create Player
+test case: create player <!--Реализован метод создания нового игрока с использованием переменных-->
+
+Directory: Credit Real Money
+test case: credit real money <!--Реализован метод проверки баланса с использованием переменных и сравнение переменных-->
